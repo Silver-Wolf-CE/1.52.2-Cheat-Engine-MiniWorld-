@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1807637513</ID>
+      <Description>"拓展射程"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+originalcode:
+mov [eax+34],43800000
+movss xmm1,[eax+34]
+exit:
+jmp returnhere
+"libSandboxGame.dll"+1DA7E71:
+jmp newmem
+returnhere:
+[DISABLE]
+dealloc(newmem)
+"libSandboxGame.dll"+1DA7E71:
+db F3 0F 10 48 34
+//movss xmm1,[eax+34]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1807637526</ID>
+      <Description>"子彈穿透墻體"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+libSandboxGame.dll+1DADF15:
+jmp libSandboxGame.dll+1DAE499
+nop
+[DISABLE]
+libSandboxGame.dll+1DADF15:
+je libSandboxGame.dll+1DAE499
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1807637521</ID>
+      <Description>"傷害不衰減"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+originalcode:
+mov [edx+54],0
+movss xmm0,[edx+54]
+exit:
+jmp returnhere
+"libSandboxGame.dll"+1DA714F:
+jmp newmem
+returnhere:
+[DISABLE]
+dealloc(newmem)
+"libSandboxGame.dll"+1DA714F:
+db F3 0F 10 42 54
+//movss xmm0,[edx+54]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1807637520</ID>
+      <Description>"急速裝填"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem3,2048)
+label(returnhere3)
+label(originalcode3)
+label(exit3)
+newmem3:
+originalcode3:
+mov [eax+8C],0
+mov [eax+27C],0
+movss xmm0,[eax+0000008C]
+exit3:
+jmp returnhere3
+"libSandboxGame.dll"+1DE5C6A:
+jmp newmem3
+nop 3
+returnhere3:
+alloc(newmem2,2048)
+label(returnhere2)
+label(originalcode2)
+label(exit2)
+newmem2:
+originalcode2:
+mov [eax+80],0
+mov [eax+84],0
+mov [eax+88],0
+movss xmm2,[eax+00000080]
+exit2:
+jmp returnhere2
+"libSandboxGame.dll"+1DE5ED4:
+jmp newmem2
+nop 3
+returnhere2:
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+originalcode:
+mov [eax+74],0
+mov [eax+78],0
+mov [eax+7C],0
+movss xmm2,[eax+74]
+exit:
+jmp returnhere
+"libSandboxGame.dll"+1DE5EDE:
+jmp newmem
+returnhere:
+[DISABLE]
+dealloc(newmem3)
+"libSandboxGame.dll"+1DE5C6A:
+db F3 0F 10 80 8C 00 00 00
+//movss xmm0,[eax+0000008C]
+dealloc(newmem2)
+"libSandboxGame.dll"+1DE5ED4:
+db F3 0F 10 90 80 00 00 00
+//movss xmm2,[eax+00000080]
+dealloc(newmem)
+"libSandboxGame.dll"+1DE5EDE:
+db F3 0F 10 50 74
+//movss xmm2,[eax+74]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1807637519</ID>
+      <Description>"無後座"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//從這裡到 '[DISABLE]' 的指令將被用來啟用作弊功能
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //這是已分配的記憶體，你具有存取、寫入、執行的權限
+//將您的指令放在這裡
+
+originalcode:
+mov [edx+000000A0],0
+mulss xmm0,[edx+000000A0]
+
+exit:
+jmp returnhere
+
+"libSandboxGame.dll"+1DAAD7E:
+jmp newmem
+nop 3
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//從這裡到程式碼結尾的指令將用於禁用作弊
+dealloc(newmem)
+"libSandboxGame.dll"+1DAAD7E:
+db F3 0F 59 82 A0 00 00 00
+//mulss xmm0,[edx+000000A0]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1807637518</ID>
+      <Description>"子彈貫穿"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+originalcode:
+mov [eax+48],42C80000
+movss xmm0,[eax+48]
+exit:
+jmp returnhere
+"libSandboxGame.dll"+1DAE6B4:
+jmp newmem
+returnhere:
+[DISABLE]
+dealloc(newmem)
+"libSandboxGame.dll"+1DAE6B4:
+db F3 0F 10 40 48
+//movss xmm0,[eax+48]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1807637516</ID>
+      <Description>"全自動"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+originalcode:
+mov [eax+1C],0
+cmp dword ptr [eax+1C],02
+je libSandboxGame.dll+1DC9D31
+exit:
+jmp returnhere
+"libSandboxGame.dll"+1DC9D19:
+jmp newmem
+nop
+returnhere:
+[DISABLE]
+dealloc(newmem)
+"libSandboxGame.dll"+1DC9D19:
+db 83 78 1C 02 74 12
+//cmp dword ptr [eax+1C],02
+//je libSandboxGame.dll+1DC9D31
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1807637515</ID>
+      <Description>"無擴散"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+alloc(newmem2,2048)
+label(returnhere2)
+label(originalcode2)
+label(exit2)
+newmem2:
+originalcode2:
+mov [esi+000000B4],0
+mulss xmm3,[esi+000000B4]
+exit2:
+jmp returnhere2
+"libSandboxGame.dll"+1DAD650:
+jmp newmem2
+nop 3
+returnhere2:
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+originalcode:
+mov [ecx+000000C4],0
+movss xmm1,[ecx+000000C4]
+exit:
+jmp returnhere
+"libSandboxGame.dll"+1DAC993:
+jmp newmem
+nop 3
+returnhere:
+[DISABLE]
+dealloc(newmem2)
+"libSandboxGame.dll"+1DAD650:
+db F3 0F 59 9E B4 00 00 00
+//mulss xmm3,[esi+000000B4]
+dealloc(newmem)
+"libSandboxGame.dll"+1DAC993:
+db F3 0F 10 89 C4 00 00 00
+//movss xmm1,[ecx+000000C4]
+
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
