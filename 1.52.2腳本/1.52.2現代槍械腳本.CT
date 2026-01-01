@@ -267,7 +267,7 @@ db F3 0F 10 89 C4 00 00 00
     </CheatEntry>
     <CheatEntry>
       <ID>1807637508</ID>
-      <Description>"自瞄測試Lua(急速版,可能亂瞄人)"</Description>
+      <Description>"暴力自瞄(僅瞄準非隊友目標,如果自己隊伍是0的話,全部都會瞄準)"</Description>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>{$Lua}
 if syntaxcheck then return end
@@ -453,3 +453,4 @@ end
   </CheatEntries>
   <UserdefinedSymbols/>
 </CheatTable>
+
